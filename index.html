@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script defer src="script.js"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <title>turkanaculuture</title>
+  <style>
+    :root {
+      --primary: #ff0000;
+      --secondary: #282b29;
+      --dark: #2c3e50;
+      --light: #ecf0f1;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'playfair Display'
+    }
+    body {
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #f9f9f9;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1516026672322-bc52d61a55a5') center/cover;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background-color: var(--dark);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: var(--secondary);
+    }
+    section {
+      padding: 4rem 5%;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+    .experiences {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .experience-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .experience-card:hover {
+      transform: translateY(-10px);
+    }
+    .experience-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    .booking-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    .social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    color:#ff0000;
+    font-size: 28px;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
+}
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 2rem;
+        
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">The Turkana Culture</div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#experiences">Experiences</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <h1>Discover The Turkana Culture</h1>
+  <p>Journey into the heart of Turkana and experience its vibrant traditions. Support sustainable tourism and uplift local communities through every visit.</p>
+  <a href="#booking" class="btn">Book Your Experience</a>
+</header>
+
+<section id="about">
+  <h2 class="section-title">About The Turkana Ecotourism</h2>
+  <p>Our initiative bridges the gap between responsible travelers and the vibrant Turkana community in northern Kenya. Through immersive cultural exchanges, we create meaningful experiences that enrich both visitors and locals.
+
+Every visit contributes directly to local development — supporting education, healthcare, and environmental conservation. At Turkana Ecotourism, we believe in travel that empowers, preserves, and connects.
+
+</p>
+</section>
+
+<section id="experiences">
+  <h2 class="section-title">Our Experiences</h2>
+  <div class="experiences">
+    <div class="experience-card">
+      <img src="img/turkanawoman.jpg" alt="Village Stay">
+      <div class="card-content">
+        <h3>Turkana Homestead "Awi"</h3>
+        <p>Live with a Turkana family, participate in daily activities, and sleep in a traditional Awi.Modern humans were sold a dream that has made us stray away from what is truly important in this life and as a result, we have damaged the earth in pursuit of this dream.</p>
+      </div>
+    </div>
+    <div class="experience-card">
+      <img src="img/laketurkanaview.jpg" alt="Wildlife Safari">
+      <div class="card-content">
+        <h3>Lake Turkana Safari</h3>
+        <p>Explore The most saline of Africa's large lakes, Turkana is an outstanding laboratory for the study of plant and animal communities. The three National Parks serve as a stopover for migrant waterfowl and are major breeding grounds for the Nile crocodile, hippopotamus and a variety of venomous snakes. The Koobi Fora deposits, rich in mammalian, molluscan and other fossil remains, have contributed more to the understanding of paleo-environments than any other site on the continent..</p>
+      </div>
+    </div>
+    <div class="experience-card">
+      <img src="img/tobonglore.jpg" alt="Cultural Activities">
+      <div class="card-content">
+        <h3>T O B O N G’ U L O R E</h3>
+        <p>T O B O N G’ U L O R E - “ Welcome back HOME! “ A celebration of Turkana’s indigenous culture and heritage. It is known to be that the girl with more beads attracts more men which raises her status and value in terms of bride-price.
+ </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <h2 class="section-title">Book Your Experience</h2>
+  <form class="booking-form" id="bookingForm">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="experience">Experience</label>
+      <select id="experience" name="experience" required>
+        <option value="">Select an experience</option>
+        <option value="homestay">Village Homestay (3 days)</option>
+        <option value="safari">Warrior-Guided Safari (1 day)</option>
+        <option value="cultural">Cultural Immersion (2 days)</option>
+        <option value="custom">Custom Package</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Preferred Dates</label>
+      <input type="date" id="date" name="date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" min="1" max="10" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Special Requests</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="btn">Submit Booking</button>
+  </form>
+  <div id="responseMessage" style="margin-top: 20px; font-weight: bold;"></div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <p>Have questions? Reach out to our team for more information.</p>
+  <p>Email: info@turkanaculuture.com</p>
+  <p>Phone: +254 705 902 590</p>
+</section>
+
+<footer>
+  
+  <p>&copy; 2025 Turkana Culture. All rights reserved.</p>
+  <p>Sustainable tourism supporting Turkana community.</p>
+  <div class="social-icons">
+    <a href="#" class="social-icon"><i class='bx bxl-facebook-circle'></i></a>
+    <a href="#" class="social-icon"><i class='bx bxl-instagram' ></i></i></a>
+    <a href="https://x.com/ronnyatok" class="social-icon"><i class='bx bxl-twitter'></i></a>
+    <a href="https://wa.link/ukxkjz" class="social-icon"><i class='bx bxl-whatsapp'></i></i></a>
+    <a href="https://www.reddit.com/user/Ronnyatok/" class="social-icon"><i class='bx bxl-reddit'></i></i></a>
+    <a href="https://www.pinterest.com/ronnyatok/" class="social-icon"><i class='bx bxl-pinterest'></i></i></a>
+    </div>
+</footer>
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch('process_booking.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(res => res.text())
+  .then(response => {
+    document.getElementById('responseMessage').innerHTML = response;
+    form.reset();
+  })
+  .catch(err => {
+    console.error(err);
+    document.getElementById('responseMessage').innerHTML = 'Something went wrong. Please try again.';
+  });
+});
+</script>
+
+</body>
+</html>
